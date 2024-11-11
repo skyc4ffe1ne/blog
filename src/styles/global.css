@@ -1,0 +1,24 @@
+@tailwind base;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+@layer base {
+  :root {
+    --text-primary: 120, 12%, 8%;
+    --background: 120, 12%, 95%;
+    --primary: 111, 12%, 30%;
+    --secondary: 171, 12%, 66%;
+    --accent: 197, 13%, 44%;
+  }
+
+  .dark {
+    --text-primary: 120, 12%, 92%;
+    --background: 120, 13%, 5%;
+    --primary: 111, 13%, 70%;
+    --secondary: 171, 12%, 34%;
+    --accent: 195, 13%, 56%;
+  }
+}

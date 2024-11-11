@@ -1,16 +1,63 @@
 ---
+import { Icon } from "astro-icon/components";
 
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="bg-background">
+    <header class="flex w-full py-4 mt-5 justify-center items-center border-b">
+      <h1 id="blogTitle" class="text-3xl font-bold text-primary">
+        caffeine <span> blog</span>
+      </h1>
+    </header>
+    <div class="flex gap-4 items-center relative">
+      <div class="rounded-r-3xl border bg-red-400 w-[500px] h-[500px]"></div>
+      <div class="">
+        <h2 class="pb-4 text-6xl font-bold tracking-tighter">
+          How i <i>"understood"</i>
+          <span class="text-accent">GIT </span>
+        </h2>
+        <p class="max-w-[600px] text-xl text-gray-800 pb-12">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, amet
+          provident, nemo optio laborum aut in cum expedita odit voluptatibus
+          dolorum. Cumque officiis delectus assumenda, nulla nam doloribus
+          veniam provident.
+        </p>
+
+        <a href="/about/" class="pointer">
+          <div
+            class="flex gap-4 items-center border-black rounded-md border text-xl py-3 px-8 bg-black/10 w-fit"
+          >
+            <p class="pr-2 border-black text-black">
+              See ` <span class="font-medium font-mono"
+                >how i understood git</span
+              > `
+            </p>
+
+            <Icon name="guidance:left-2-short-arrow" size={24} />
+          </div>
+        </a>
+      </div>
+
+      <div class="absolute top-20 left-3/4 rotate-6 flex gap-2">
+        <span class="text-gray-400"> git push </span>
+        <Icon name="guidance:right-angle-arrow" color="gray" />
+      </div>
+      <!--        <span class="absolute top-32 left-[75.5%]  text-gray-400"> -- rebase </span>  -->
+
+      <div class="absolute top-16 left-[65%] -rotate-6 flex gap-2">
+        <Icon name="guidance:escalator-down-arrow" color="gray" />
+        <span class="text-gray-400"> git checkout </span>
+        <Icon name="guidance:escalator-up-arrow" color="gray" />
+      </div>
+    </div>
+  </body>
 </html>

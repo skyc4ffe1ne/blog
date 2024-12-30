@@ -1,0 +1,11 @@
+---
+export async function getStaticPaths() {
+  return [
+    { params: { tag: "git" } },
+    { params: { tag: "react" } },
+    { params: { tag: "typescript" } },
+  ];
+}
+---
+
+<h1>Hello maybe we are in ...</h1>

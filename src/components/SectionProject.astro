@@ -4,7 +4,7 @@ import { Icon } from "astro-icon/components";
 const contentProjects = [
   {
     icons: ["react-icon", "nextjs-icon", "typescript-icon", "postgresql-icon"],
-    titleProject: "requiz",
+    titleProject: "re-quiz",
     descr:
       "Is an app where u can upload your notes, and it will create a quiz on that",
   },
@@ -27,7 +27,10 @@ const contentProjects = [
   <div class="pt-24 border-t flex flex-col gap-20">
     {
       contentProjects.map((el) => (
-        <a href={`/project/${el.titleProject}/`}>
+        <a
+          href={`https://github.com/skyc4ffe1ne/${el.titleProject}/`}
+          target="_blank"
+        >
           <div class="flex gap-4 ">
             <div class="flex gap-2 items-end flex-1 justify-end">
               {el.icons.map((el) => (

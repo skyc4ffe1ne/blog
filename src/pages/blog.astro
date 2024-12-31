@@ -1,1 +1,19 @@
-<h1>This is a blog!</h1>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const posts = Object.values(import.meta.glob("./blog/*.md", { eager: true }));
+---
+
+<BaseLayout>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={post.url}>{post.frontmatter.title}</a>
+        </li>
+      ))
+    }
+
+    <h2 class="text-4xl">The Git journey</h2>
+  </ul>
+</BaseLayout>

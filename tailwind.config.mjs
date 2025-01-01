@@ -17,6 +17,9 @@ export default {
           DEFAULT: "hsl(var(--accent))",
         },
       },
+      transitionTimingFunction: {
+        "in-expo": "cubic-bezier(0.4, 0, 0.6, 1)",
+      },
     },
   },
   plugins: [typography],

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "The Git Journey"
-author: "skyc4ffe1ne"
+title: "What is a commit"
+author: "caffeine*"
 ---
 
 # The Three Main Areas Of Git

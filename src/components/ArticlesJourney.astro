@@ -1,0 +1,25 @@
+---
+const posts = Object.values(
+  import.meta.glob("../pages/blog/git*.md", { eager: true }),
+);
+---
+
+<div
+  class="flex-2 px-16 border-l border-r border-black max-h-[540px] overflow-y-scroll"
+>
+  <h4 class="font-medium text-[32px] pb-4">Articles</h4>
+  {
+    posts.map((post, index) => (
+      <div class="flex flex-col pb-6 px-2 border-b border-black pt-11 group text-foreground">
+        <a class="flex" href={`git_${index}`}>
+          <h2 class="text-[64px] font-medium text-gray-400  py-4 leading-tight w-[867px] group-hover:text-foreground capitalize hover_effect">
+            {post.frontmatter.title}
+          </h2>
+          <span class="px-4 font-medium text-2xl text-gray-300 group-hover:text-foreground self-start hover_effect">
+            0{index + 1}
+          </span>
+        </a>
+      </div>
+    ))
+  }
+</div>

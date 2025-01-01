@@ -1,69 +1,71 @@
-h1,
-h2,
-h3,
-h4 {
-  @apply font-semibold;
+.blog {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold;
+  }
 }
 
-h1 {
+.blog h1 {
   @apply text-[42px] leading-[52px] tracking-tight my-8 capitalize;
 }
 
-h2 {
+.blog h2 {
   @apply text-[32px] leading-10 tracking-tight mb-7 capitalize;
 }
 
-h3 {
+.blog h3 {
   @apply text-2xl leading-8 tracking-tight mb-4 capitalize;
 }
 
-h4 {
+.blog h4 {
   @apply text-xl leading-6 tracking-normal mb-2;
 }
 
-p {
+.blog p {
   @apply max-w-2xl mb-11  has-[+ol]:mb-2 has-[+ul]:mb-2 text-xl leading-8;
 }
 
-ul {
+.blog ul {
   @apply list-disc;
 }
-ol {
+.blog ol {
   @apply list-decimal pl-8 mb-8;
 }
 
-li {
+.blog li {
   @apply text-xl;
 }
 
-a {
+.blog a {
   @apply block underline;
 }
 
-code {
+.blog code {
   @apply mx-2 text-blue-500 text-[18px];
 }
 
-::selection {
+.blog ::selection {
   @apply text-white bg-black;
 }
 
-code::selection {
+.blog code::selection {
   @apply bg-blue-500 text-white;
 }
 
-.h_color1 {
+.blog .h_color1 {
   @apply text-red-900;
 }
-.h_color2 {
+.blog .h_color2 {
   @apply text-lime-900;
 }
-.h_color3 {
+.blog .h_color3 {
   @apply text-blue-900;
 }
-.h_color4 {
+.blog .h_color4 {
   @apply text-violet-900;
 }
-.h_color5 {
+.blog .h_color5 {
   @apply text-pink-900;
 }

@@ -23,25 +23,32 @@ const contentProjects = [
 ];
 ---
 
-<div class="flex justify-center items-center pt-24">
+<div class="flex justify-center items-center pt-24 border-l">
   <div class="pt-24 border-t flex flex-col gap-20">
+    <h2 class="text-sm text-foreground font-mono tracking-tighter">Projects</h2>
     {
       contentProjects.map((el) => (
         <a
           href={`https://github.com/skyc4ffe1ne/${el.titleProject}/`}
           target="_blank"
+          class="group"
         >
-          <div class="flex gap-4 ">
-            <div class="flex gap-2 items-end flex-1 justify-end">
+          <div class="flex gap-4">
+            <div class="flex gap-4 items-end flex-1 justify-end">
               {el.icons.map((el) => (
-                <Icon name={el} class="w-6 h-6 grayscale" />
+                <Icon
+                  name={el}
+                  class="w-6 h-6 grayscale group-hover:grayscale-0 gray_effect"
+                />
               ))}
             </div>
             <div class="flex-1 flex items-end justify-center">
-              <h2 class="text-black text-5xl font-medium">{el.titleProject}</h2>
+              <h2 class="text-[#9F9F9F] hover:text-black text-5xl font-medium hover_effect">
+                {el.titleProject}
+              </h2>
             </div>
 
-            <div class="flex-1 flex items-end justify-start">
+            <div class="flex-1 flex items-end justify-center">
               <p class="text-[#606060] font-medium text-xl leading-6">
                 {el.descr}
               </p>

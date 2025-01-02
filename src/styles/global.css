@@ -39,8 +39,19 @@ body {
   .hover_effect {
     @apply transition-[color] duration-300 ease-in-expo;
   }
+  .gray_effect {
+    @apply transition-all duration-300 ease-in-expo;
+  }
 }
 
-details[open] summary #arrow_accordion {
-  rotate: 180deg;
+.maskScroll {
+  background-image: linear-gradient(
+    to bottom,
+    white 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
+
+/* details[open] summary #arrow_accordion {
+  rotate: 180deg;
+} */

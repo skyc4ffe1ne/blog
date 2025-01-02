@@ -1,10 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
 const resoursesLinks = [
-  {
-    nameLink: "The git book",
-    link: "https://git-scm.com/book/en/v2",
-  },
   {
     nameLink: "The git book",
     link: "https://git-scm.com/book/en/v2",
@@ -16,18 +11,18 @@ const resoursesLinks = [
 ];
 ---
 
-<div class="flex-1">
-  <h4 class="font-medium text-[32px]">Resources</h4>
-  <ul class="pt-4 pl-4 flex flex-col gap-4">
+<div class="self-start mt-12 ml-24">
+  <h4 class="font-medium text-base">Resources</h4>
+  <ul class="pt-4 flex flex-col gap-2">
     {
       resoursesLinks.map((el) => (
         <li>
           <a
             href={el.link}
-            class="text-xl text-gray-600 flex items-center gap-1 hover:text-foreground"
+            class="text-base text-gray-400 flex items-center hover:text-foreground hover:underline whitespace-nowrap"
             target="_blank"
           >
-            {el.nameLink} <Icon name="arrow_link" class="text-foreground" />
+            {el.nameLink}
           </a>
         </li>
       ))

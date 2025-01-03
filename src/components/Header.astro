@@ -1,10 +1,24 @@
 ---
 import { Icon } from "astro-icon/components";
+import ThemeToggle from "./ThemeToggle.astro";
+import Hamburger from "./Hamburger.astro";
+import HamburgerNav from "./HamburgerNav.astro";
 const { isBlog } = Astro.props;
+
+const linksNav = [
+  {
+    nameLink: "Blog",
+    link: "/blog/",
+  },
+  {
+    nameLink: "About me",
+    link: "/about-me/",
+  },
+];
 ---
 
-<header class="mx-4 mt-8 flex justify-between items-center">
-  <a href="/" class="flex-1 flex items-center">
+<header class="mx-2 mt-8 flex items-center justify-between lg:mx-4">
+  <a href="/" class="flex flex-1 items-center">
     <Icon name="caffeine" />
     <div class="flex h-8 items-start">
       <Icon name="asterisk-icon" />
@@ -15,23 +29,24 @@ const { isBlog } = Astro.props;
     isBlog ? (
       ""
     ) : (
-      <nav class="flex-1 flex justify-center">
-        <ul class="flex gap-4">
-          <li>
-            <a href="/blog/"> Blog</a>
-          </li>
-          <li>
-            <a href="/about-me/"> About me </a>
-          </li>
+      <nav class="hidden md:flex md:flex-1 md:items-end md:justify-center">
+        <ul class="flex gap-8">
+          {linksNav.map((el) => (
+            <li>
+              <a href={el.link} class="text-link text-sm hover:text-foreground">
+                {el.nameLink}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     )
   }
-  <a
-    class="flex flex-1 justify-end"
-    href="https://github.com/skyc4ffe1ne"
-    target="_blank"
-  >
-    <Icon name="github_dark-icon" class="w-6 h-6" />
-  </a>
+
+  <Hamburger />
+  <div class="ml-2 flex justify-end md:ml-0 md:flex-1">
+    <ThemeToggle />
+  </div>
 </header>
+
+<HamburgerNav />

@@ -3,10 +3,14 @@ import { Icon } from "astro-icon/components";
 const { title, icon } = Astro.props;
 ---
 
-<div class="flex justify-end [&:not(:first-child)]:mt-48 first:mt-20">
-  <h2 class="text-9xl text-right text-foreground capitalize">{title}</h2>
-  <Icon name={icon} class="w-8 h-8" />
+<div class="flex justify-end first:mt-20 [&:not(:first-child)]:mt-48">
+  <h2 class="pb-2 text-right text-4xl capitalize text-foreground md:text-9xl">
+    {title}
+  </h2>
+  <Icon name={icon} class="h-6 w-6 md:h-8 md:w-8" />
 </div>
+
+<!-- Accordion only html -->
 <!--{
   title
 }

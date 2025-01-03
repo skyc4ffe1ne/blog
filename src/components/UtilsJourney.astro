@@ -1,6 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
-
 const utilsLinks = [
   {
     nameLink: "How to write a commit",
@@ -17,16 +15,16 @@ const utilsLinks = [
 ];
 ---
 
-<div class="flex-1 self-start ml-16 mt-12">
-  <h4 class="font-medium text-base">Utils</h4>
-  <ul class="pt-4 flex flex-col gap-2">
+<div class="ml-16 mt-12 flex-1 self-start">
+  <h4 class="text-base font-medium">Utils</h4>
+  <ul class="flex flex-col gap-2 pt-4">
     {
       utilsLinks.map((el) => (
         <li>
           <a
             href={el.link}
             target="_blank"
-            class="text-base text-gray-400 flex items-center gap-1 hover:text-foreground hover:underline whitespace-nowrap"
+            class="text-ghost flex items-center gap-1 whitespace-nowrap text-base hover:text-foreground hover:underline"
           >
             {el.nameLink}
           </a>

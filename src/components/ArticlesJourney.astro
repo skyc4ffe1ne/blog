@@ -5,27 +5,29 @@ const posts = Object.values(
 ---
 
 <div
-  class="flex-2 border-l border-r border-black max-h-[540px] overflow-y-scroll pb-2 relative"
+  class="flex-2 max-h-article_height relative overflow-y-scroll border-l border-r border-foreground"
 >
-  <div class="sticky top-0 left-0 w-full h-12 z-10 bg-transparent maskScroll">
+  <div class="maskScroll sticky left-0 top-0 z-10 h-12 w-full bg-transparent">
   </div>
-  <h4 class="font-medium text-[32px] pb-4 px-14">Articles</h4>
+  <h4 class="text-2_r px-14 pb-4 font-medium">Articles</h4>
   {
     posts.map((post, index) => (
       <div
-        class={`flex  flex-col px-16  border-b border-black group text-foreground ${index === 0 ? "pt-0" : "pt-16"}`}
+        class={`group flex flex-col border-b border-foreground px-16 text-foreground ${index === 0 ? "pt-0" : "pt-16"}`}
       >
         <a class="flex" href={`git_${index}`}>
-          <h2 class="text-[64px] font-medium text-gray-400 leading-tight group-hover:text-foreground capitalize hover_effect tracking-tight">
+          <h2 class="hover_effect text-4_r text-ghost font-medium capitalize leading-tight tracking-tight group-hover:text-foreground">
             {post.frontmatter.title}
           </h2>
-          <span class="px-4 font-medium text-2xl text-gray-300 group-hover:text-foreground self-start hover_effect">
+          <span class="hover_effect text-ghost_label self-start px-4 text-2xl font-medium group-hover:text-foreground">
             0{index + 1}
           </span>
         </a>
       </div>
     ))
   }
-  <div class="sticky top-0 left-0 w-full h-12 z-10 bg-transparent maskScroll">
+  <div
+    class="maskScrollBottom sticky bottom-0 left-0 z-10 h-12 w-full bg-transparent"
+  >
   </div>
 </div>

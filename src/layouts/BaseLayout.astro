@@ -19,5 +19,8 @@ let checkPath = currentPath === "/" ? false : true;
     <Header isBlog={checkPath} />
     <slot />
     <Footer />
+    <script>
+      import "../scripts/hamburger.js";
+    </script>
   </body>
 </html>

@@ -5,21 +5,23 @@ const posts = Object.values(
 ---
 
 <div
-  class="flex-2 max-h-article_height relative overflow-y-scroll border-l border-r border-foreground"
+  class="flex-2 relative max-h-article_height overflow-y-scroll border-l border-r border-foreground"
 >
   <div class="maskScroll sticky left-0 top-0 z-10 h-12 w-full bg-transparent">
   </div>
-  <h4 class="text-2_r px-14 pb-4 font-medium">Articles</h4>
+  <h4 class="text-clamp_from-24_to-32 px-2 pb-4 font-medium md:px-14">
+    Articles
+  </h4>
   {
     posts.map((post, index) => (
       <div
-        class={`group flex flex-col border-b border-foreground px-16 text-foreground ${index === 0 ? "pt-0" : "pt-16"}`}
+        class={`group flex flex-col border-b border-foreground px-3 text-foreground md:px-16 ${index === 0 ? "pt-0" : "pt-12 md:pt-16"}`}
       >
         <a class="flex" href={`git_${index}`}>
-          <h2 class="hover_effect text-4_r text-ghost font-medium capitalize leading-tight tracking-tight group-hover:text-foreground">
+          <h2 class="hover_effect text-clamp_from-24_to-64 font-medium capitalize leading-tight tracking-tight text-ghost group-hover:text-foreground">
             {post.frontmatter.title}
           </h2>
-          <span class="hover_effect text-ghost_label self-start px-4 text-2xl font-medium group-hover:text-foreground">
+          <span class="hover_effect self-start px-2 text-base font-medium text-ghost_label group-hover:text-foreground md:px-4 md:text-2xl">
             0{index + 1}
           </span>
         </a>

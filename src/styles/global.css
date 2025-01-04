@@ -44,7 +44,7 @@ body {
 
 @layer components {
   .button_outline {
-    @apply text-txt_outline rounded-xl border border-foreground px-3 py-1 text-base md:px-5;
+    @apply rounded-xl border border-foreground px-3 py-1 text-base text-txt_outline md:px-5;
   }
 }
 @layer utilities {
@@ -74,10 +74,6 @@ body {
 
 .expanded .hamburgerNav {
   display: block;
-}
-
-.clamp_effect {
-  font-size: clamp(2.625rem, 0.8699rem + 8.7755vw, 8rem);
 }
 
 /* details[open] summary #arrow_accordion {

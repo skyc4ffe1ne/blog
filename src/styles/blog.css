@@ -1,71 +1,96 @@
-.blog {
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply font-semibold;
+@tailwind base;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* #FFFFFF */
+    --text-foreground: 0 0% 0%; /* #000000 */
+    --text-para-blog: 215 28% 17%;
+    --text-link-blog: 226 71% 40%;
+    --text-code-blog: 217 91% 60%;
+    --h-color-1: 0 63% 31%;
+    --h-color-2: 88 61% 20%;
+    --h-color-3: 224 64% 33%;
+    --h-color-4: 264 67% 35%;
+    --h-color-5: 336 69% 30%;
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* #000000 */
+    --text-foreground: 0 0% 100%; /* #FFFFFF */
+    --text-para-blog: 218 11% 65%;
+    --text-link-blog: 226 71% 55%;
+    --text-code-blog: 217 91% 80%;
+    --h-color-1: 0 96% 89%;
+    --h-color-2: 81 88% 80%;
+    --h-color-3: 213 97% 87%;
+    --h-color-4: 251 95% 92%;
+    --h-color-5: 326 85% 90%;
   }
 }
 
+.blog {
+  @apply bg-background text-para_blog;
+}
+
 .blog h1 {
-  @apply text-[42px] leading-[52px] tracking-tight my-8 capitalize;
+  @apply my-8 text-[42px] capitalize leading-[52px] tracking-tight text-foreground;
 }
 
 .blog h2 {
-  @apply text-[32px] leading-10 tracking-tight mb-7 capitalize;
+  @apply mb-7 text-[32px] capitalize leading-10 tracking-tight text-foreground;
 }
 
 .blog h3 {
-  @apply text-2xl leading-8 tracking-tight mb-4 capitalize;
+  @apply mb-4 text-2xl capitalize leading-8 tracking-tight text-foreground;
 }
 
 .blog h4 {
-  @apply text-xl leading-6 tracking-normal mb-2;
+  @apply mb-2 text-xl leading-6 tracking-normal text-foreground;
 }
 
 .blog p {
-  @apply max-w-2xl mb-11  has-[+ol]:mb-2 has-[+ul]:mb-2 text-xl leading-8;
+  @apply mb-11 max-w-2xl text-base leading-8 text-para_blog has-[+ol]:mb-2 has-[+ul]:mb-2;
 }
 
 .blog ul {
   @apply list-disc;
 }
 .blog ol {
-  @apply list-decimal pl-8 mb-8;
+  @apply mb-8 list-decimal pl-8;
 }
 
 .blog li {
-  @apply text-xl;
+  @apply text-base;
 }
 
 .blog a {
-  @apply block underline;
+  @apply block text-link_blog underline;
 }
 
 .blog code {
-  @apply mx-2 text-blue-500 text-[18px];
+  @apply relative mx-2 text-sm text-code_blog before:absolute before:-left-2 before:-top-1 before:text-code_blog before:content-['`'] after:absolute after:-right-2 after:-top-1 after:text-code_blog after:content-['`'];
 }
 
 .blog ::selection {
-  @apply text-white bg-black;
+  @apply bg-foreground text-background;
 }
 
 .blog code::selection {
-  @apply bg-blue-500 text-white;
+  @apply bg-code_blog text-foreground;
 }
 
 .blog .h_color1 {
-  @apply text-red-900;
+  @apply text-high_1;
 }
 .blog .h_color2 {
-  @apply text-lime-900;
+  @apply text-high_2;
 }
 .blog .h_color3 {
-  @apply text-blue-900;
+  @apply text-high_3;
 }
 .blog .h_color4 {
-  @apply text-violet-900;
+  @apply text-high_4;
 }
 .blog .h_color5 {
-  @apply text-pink-900;
+  @apply text-high_5;
 }

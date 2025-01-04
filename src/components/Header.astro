@@ -18,8 +18,8 @@ const linksNav = [
 ---
 
 <header class="mx-2 mt-8 flex items-center justify-between lg:mx-4">
-  <a href="/" class="flex flex-1 items-center">
-    <Icon name="caffeine" />
+  <a href="/" class="!flex flex-1 items-center">
+    <Icon name="caffeine" class="text-foreground" />
     <div class="flex h-8 items-start">
       <Icon name="asterisk-icon" />
     </div>
@@ -33,7 +33,7 @@ const linksNav = [
         <ul class="flex gap-8">
           {linksNav.map((el) => (
             <li>
-              <a href={el.link} class="text-link text-sm hover:text-foreground">
+              <a href={el.link} class="text-sm text-link hover:text-foreground">
                 {el.nameLink}
               </a>
             </li>
@@ -43,7 +43,7 @@ const linksNav = [
     )
   }
 
-  <Hamburger />
+  {isBlog ? "" : <Hamburger />}
   <div class="ml-2 flex justify-end md:ml-0 md:flex-1">
     <ThemeToggle />
   </div>

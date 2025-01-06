@@ -1,0 +1,38 @@
+---
+const timeLineContent = [
+  {
+    title: "Ossu",
+    description:
+      "Is a complete education in computer science using online materials. It's not merely for career training or professional development.",
+    link: "/blog/ossu",
+  },
+  {
+    title: "Git",
+    description:
+      "Is a distributed version control system that tracks versions of files. It is often used to control source code by programmers who are developing software collaboratively.",
+    link: "/blog/git_0",
+  },
+];
+---
+
+<main class="mx-auto flex max-w-[52rem] pt-20">
+  <div class="mr-[35px] mt-2 h-screen w-0.5 bg-ghost"></div>
+  <div class="flex flex-col gap-16">
+    {
+      timeLineContent.map((el, index) => (
+        <article class="relative">
+          <h2 class="bg-background text-xl font-semibold tracking-tight text-foreground">
+            {el.title}
+          </h2>
+          <div class="absolute -left-10 top-2 z-10 h-[9px] w-[9px] rounded-full border-2 bg-background" />
+          {/* <div class="absolute -left-20 top-0 text-sm">0{index + 1}</div> */}
+          <p class="mb-4 mt-2 line-clamp-2 text-ghost">{el.description}</p>
+          <a href={el.link} class="font-medium text-accent">
+            {" "}
+            See the journey{" "}
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</main>

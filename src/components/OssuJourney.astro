@@ -1,0 +1,49 @@
+---
+const ossuContent = [
+  { title: "Core Programming", type: "label" },
+  {
+    title: "Systematic Program Design",
+    description:
+      " This programming course takes a unique approach, as it focuses on learning a systematic programming method rather than a programming language. This practical approach will help you channel your creativity so that you can program well in any language.",
+    link: "/blog/ossu_1",
+    type: "card",
+  },
+  {
+    title: "Class-based Program Design",
+    description:
+      " This corse covers the principles of object oriented program design, the basic rules of program evaluation, and examines the relationship between algorithms and data structures, as well as basic techniques for analyzing algorithm complexity.",
+    link: "/blog/ossu_1",
+    type: "card",
+  },
+];
+---
+
+<main class="mx-auto max-w-[52rem] pt-20">
+  <h2 class="text-4_r text-foreground">Ossu</h2>
+
+  <section
+    class="relative mx-6 flex flex-col gap-32 border-l border-foreground px-4 pt-20"
+  >
+    {
+      ossuContent.map((el, index) =>
+        el.type == "label" ? (
+          <div class="test absolute -left-4 top-16 rounded-2xl border border-foreground bg-background px-2 py-0.5">
+            0{index + 1}
+            <span class="text-sm text-ghost"> Core programming </span>
+          </div>
+        ) : (
+          <div class={index == 1 ? "mt-16" : ""}>
+            <h3 class="text-4xl text-foreground">{el.title}</h3>
+            <p class="mb-4 mt-2 line-clamp-3 text-base text-ghost">
+              {el.description}
+            </p>
+
+            <a href={el.link} class="text-base text-accent">
+              See the article
+            </a>
+          </div>
+        ),
+      )
+    }
+  </section>
+</main>

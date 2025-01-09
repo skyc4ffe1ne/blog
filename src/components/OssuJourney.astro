@@ -1,17 +1,18 @@
 ---
+import { Icon } from "astro-icon/components";
 const ossuContent = [
   { title: "Core Programming", type: "label" },
   {
     title: "Systematic Program Design",
     description:
-      " This programming course takes a unique approach, as it focuses on learning a systematic programming method rather than a programming language. This practical approach will help you channel your creativity so that you can program well in any language.",
+      " This programming course takes a unique approach, as it focuses on learning a systematic programming method rather than a programming language.",
     link: "/blog/ossu_1",
     type: "card",
   },
   {
     title: "Class-based Program Design",
     description:
-      " This corse covers the principles of object oriented program design, the basic rules of program evaluation, and examines the relationship between algorithms and data structures, as well as basic techniques for analyzing algorithm complexity.",
+      " This corse covers the principles of object oriented program design, examines the relationship between algorithms and data structures and basic techniques for analyzing algorithm complexity.",
     link: "/blog/ossu_1",
     type: "card",
   },
@@ -19,7 +20,7 @@ const ossuContent = [
 ---
 
 <main class="mx-auto max-w-[52rem] pt-20">
-  <h2 class="text-4_r text-foreground">Ossu</h2>
+  <h2 class="rounded-xs text-4_r text-foreground">Ossu</h2>
 
   <section
     class="relative mx-6 flex flex-col gap-32 border-l border-foreground px-4 pt-20"
@@ -32,16 +33,21 @@ const ossuContent = [
             <span class="text-sm text-ghost"> Core programming </span>
           </div>
         ) : (
-          <div class={index == 1 ? "mt-16" : ""}>
+          <a
+            href={el.link}
+            class={`${index == 1 ? "mt-16" : ""} relative ml-6 rounded-md px-3 py-2`}
+          >
+            {/* <div class="absolute -left-2 top-2 h-5 w-1 rounded bg-red-400" /> */}
+            <div class="absolute -left-10 top-7 h-0.5 w-4 rounded bg-foreground" />
             <h3 class="text-4xl text-foreground">{el.title}</h3>
-            <p class="mb-4 mt-2 line-clamp-3 text-base text-ghost">
+            <p class="text-txt_journey mb-4 mt-2 line-clamp-2 text-base font-thin tracking-[0.020em]">
               {el.description}
             </p>
-
-            <a href={el.link} class="text-base text-accent">
+            <button class="flex items-center gap-1 text-sm font-medium text-accent">
               See the article
-            </a>
-          </div>
+              <Icon name="arrow_link-icon" />
+            </button>
+          </a>
         ),
       )
     }

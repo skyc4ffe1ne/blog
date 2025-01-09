@@ -32,6 +32,9 @@ export default {
         txt_outline: {
           DEFAULT: "hsl(var(--txt-outline))",
         },
+        txt_journey: {
+          DEFAULT: "hsl(var(--txt-journey))",
+        },
         para_blog: {
           DEFAULT: "hsl(var(--text-para-blog))",
         },

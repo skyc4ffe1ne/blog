@@ -13,12 +13,13 @@ body {
     --accent: 203 78% 54%; /* #30A0E5 */
     --ghost: 218 11% 65%; /* #9CA3AF */
     --ghost-label: 216 12% 84%; /* #D9D9D9 */
-    --link: 218 11% 65%; /* #9CA3AF */
+    --link: 0 0% 5%; /* #9CA3AF */
     --header: 221 39% 11%; /* #1B2B3A */
     --para: 0 0% 38%; /* #616161 */
     --intro: 0 0% 50%; /* #808080 */
     --txt-outline: 0 0% 25%; /* #B5B5B5 */
     --header_2: 0, 0%, 62%; /* #9F9F9F */
+    --txt-journey: 215 25% 27%;
   }
 
   .dark {
@@ -27,12 +28,13 @@ body {
     --accent: 203 78% 54%; /* #30A0E5 */
     --ghost: 218 11% 65%; /* #9CA3AF */
     --ghost-label: 215 14% 34%; /* #6F6F6F */
-    --link: 218 11% 65%; /* #9CA3AF */
+    --link: 0 0% 95%; /* #9CA3AF */
     --header: 220 14% 96%; /* #E9F2F5 */
     --para: 0 0% 68%; /* #ADADAD */
     --intro: 0 0% 50%; /* #808080 */
     --txt-outline: 0 0% 85%; /* #D1D1D1 */
     --header_2: 0, 0%, 32%; /* #525252 */
+    --txt-journey: 215 25% 90%;
   }
 }
 

@@ -1,4 +1,5 @@
-@tailwind base;
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
 
 @layer base {
   :root {
@@ -33,23 +34,23 @@
 }
 
 .blog h1 {
-  @apply my-8 text-[42px] capitalize leading-[52px] tracking-tight text-foreground;
+  @apply text-foreground my-8 text-[42px] leading-[52px] tracking-tight capitalize;
 }
 
 .blog h2 {
-  @apply mb-7 text-[32px] capitalize leading-10 tracking-tight text-foreground;
+  @apply text-foreground mb-7 text-[32px] leading-10 tracking-tight capitalize;
 }
 
 .blog h3 {
-  @apply mb-4 text-2xl capitalize leading-8 tracking-tight text-foreground;
+  @apply text-foreground mb-4 text-2xl leading-8 tracking-tight capitalize;
 }
 
 .blog h4 {
-  @apply mb-2 text-xl leading-6 tracking-normal text-foreground;
+  @apply text-foreground mb-2 text-xl leading-6 tracking-normal;
 }
 
 .blog p {
-  @apply mb-11 max-w-2xl text-base leading-8 text-para_blog has-[+ol]:mb-2 has-[+ul]:mb-2;
+  @apply text-para_blog mb-11 max-w-2xl text-base leading-8 has-[+ol]:mb-2 has-[+ul]:mb-2;
 }
 
 .blog ul {
@@ -64,11 +65,11 @@
 }
 
 .blog a {
-  @apply block text-link_blog underline;
+  @apply text-link_blog block underline;
 }
 
 .blog code {
-  @apply relative mx-2 text-sm text-code_blog before:absolute before:-left-2 before:-top-1 before:text-code_blog before:content-['`'] after:absolute after:-right-2 after:-top-1 after:text-code_blog after:content-['`'];
+  @apply text-code_blog before:text-code_blog after:text-code_blog relative mx-2 text-sm before:absolute before:-top-1 before:-left-2 before:content-['`'] after:absolute after:-top-1 after:-right-2 after:content-['`'];
 }
 
 .blog ::selection {

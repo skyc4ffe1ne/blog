@@ -1,30 +1,38 @@
 @import "tailwindcss";
 @config "../../tailwind.config.mjs";
 
+@theme {
+  --font-sans: "Inter", "sans-serif";
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%; /* #FFFFFF */
-    --text-foreground: 0 0% 0%; /* #000000 */
-    --text-para-blog: 215 28% 17%;
+    --background: 0 0% 100%;
+    /* #FFFFFF */
+    --text-foreground: 0 0% 0%;
+    /* #000000 */
+    --text-para-blog: 220 6% 20%;
     --text-link-blog: 226 71% 40%;
     --text-code-blog: 217 91% 60%;
-    --h-color-1: 0 63% 31%;
-    --h-color-2: 88 61% 20%;
-    --h-color-3: 224 64% 33%;
-    --h-color-4: 264 67% 35%;
-    --h-color-5: 336 69% 30%;
+    --h-color-1: 14 100% 70%;
+    --h-color-2: 344 100% 69%;
+    --h-color-3: 134 100% 70%;
+    --h-color-4: 74 100% 70%;
+    --h-color-5: 326 85% 90%;
   }
 
   .dark {
-    --background: 0 0% 0%; /* #000000 */
-    --text-foreground: 0 0% 100%; /* #FFFFFF */
+    --background: 0 0% 0%;
+    /* #000000 */
+    --text-foreground: 0 0% 100%;
+    /* #FFFFFF */
     --text-para-blog: 218 11% 65%;
     --text-link-blog: 226 71% 55%;
     --text-code-blog: 217 91% 80%;
-    --h-color-1: 0 96% 89%;
-    --h-color-2: 81 88% 80%;
-    --h-color-3: 213 97% 87%;
-    --h-color-4: 251 95% 92%;
+    --h-color-1: 14 100% 70%;
+    --h-color-2: 344 100% 69%;
+    --h-color-3: 134 100% 70%;
+    --h-color-4: 74 100% 70%;
     --h-color-5: 326 85% 90%;
   }
 }
@@ -50,18 +58,19 @@
 }
 
 .blog p {
-  @apply text-para_blog mb-11 max-w-2xl text-base leading-8 has-[+ol]:mb-2 has-[+ul]:mb-2;
+  @apply text-para_blog mb-11 max-w-2xl text-[1.375rem] leading-8 tracking-tight has-[+ol]:mb-2 has-[+ul]:mb-2;
 }
 
 .blog ul {
   @apply list-disc;
 }
+
 .blog ol {
   @apply mb-8 list-decimal pl-8;
 }
 
 .blog li {
-  @apply text-base;
+  @apply text-xl;
 }
 
 .blog a {
@@ -69,7 +78,7 @@
 }
 
 .blog code {
-  @apply text-code_blog before:text-code_blog after:text-code_blog relative mx-2 text-sm before:absolute before:-top-1 before:-left-2 before:content-['`'] after:absolute after:-top-1 after:-right-2 after:content-['`'];
+  @apply text-code_blog before:text-code_blog after:text-code_blog relative mx-2 text-base before:absolute before:-top-1 before:-left-2 before:content-['`'] after:absolute after:-top-1 after:-right-2 after:content-['`'];
 }
 
 .blog ::selection {
@@ -83,15 +92,19 @@
 .blog .h_color1 {
   @apply text-high_1;
 }
+
 .blog .h_color2 {
   @apply text-high_2;
 }
+
 .blog .h_color3 {
   @apply text-high_3;
 }
+
 .blog .h_color4 {
   @apply text-high_4;
 }
+
 .blog .h_color5 {
   @apply text-high_5;
 }

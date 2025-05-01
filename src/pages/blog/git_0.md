@@ -18,7 +18,7 @@ When we run `git status`, we see the status of the <span class="h_color3">Workin
 
 When we run `git add -A`, we take all the changes made and push them into the <span class="h_color1">Staging area</span>.
 
-#### What is the _Staging area_?
+#### What is the <span class="h_color1"> Staging area </span>?
 
 It's a file in the <span class="h_color2">Git directory</span>, with all the information about the next commit.
 

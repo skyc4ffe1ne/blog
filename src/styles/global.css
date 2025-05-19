@@ -77,22 +77,6 @@
   @apply ease-in-expo transition-all duration-300;
 }
 
-.maskScroll {
-  background-image: linear-gradient(to bottom,
-      hsl(var(--background)) 50%,
-      hsla(var(--background) / 0) 100%);
-}
-
-.maskScrollBottom {
-  background-image: linear-gradient(to top,
-      hsl(var(--background)) 50%,
-      hsla(var(--background) / 0) 100%);
-}
-
 .expanded .hamburgerNav {
   display: block;
 }
-
-/* details[open] summary #arrow_accordion {
-  rotate: 180deg;
-} */

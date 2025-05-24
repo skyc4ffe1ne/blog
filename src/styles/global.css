@@ -77,6 +77,18 @@
   @apply ease-in-expo transition-all duration-300;
 }
 
+@utility wall {
+  @apply relative h-full w-full border border-dashed border-cyan-300 bg-black;
+}
+
+@utility free {
+  @apply relative h-full w-full border border-dashed border-lime-400 bg-gray-400;
+}
+
 .expanded .hamburgerNav {
   display: block;
+}
+
+.rainbowCol {
+  width: 100%;
 }

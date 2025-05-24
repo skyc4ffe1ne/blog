@@ -3,23 +3,67 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <section class="mt-10 px-4">
-    <div class="flex h-96 w-full rounded-xl border border-black" id="rainbow">
+  <section class="mt-10 flex justify-center gap-4 px-4">
+    <div class="min-w-2xl">
+      <h2 class="text-6xl text-pretty">Rainbow</h2>
+      <div
+        class="flex h-64 w-full max-w-2xl overflow-hidden rounded-xl border border-black bg-conic/decreasing from-violet-700 via-lime-300 to-violet-700 p-1"
+        id="rainbow"
+      >
+      </div>
     </div>
-    <button
-      class="cursor-pointer rounded-xl border border-black"
-      id="sortButton"
-    >
-      Sort it</button
-    >
 
-    <button
-      class="cursor-pointer rounded-xl border border-black"
-      id="resetButton"
-    >
-      Reset</button
-    >
+    <div class="mt-20">
+      <p class="mb-4 max-w-96 text-xl">
+        Uses a bobblesort, for create a sorted rainbow based on the hue!
+      </p>
+      <span> Try It </span>
+      <button
+        class="cursor-pointer rounded-xl border border-black px-[1em] py-[0.1em] text-base"
+        id="sortButton"
+      >
+        Sort it</button
+      >
+      <button
+        class="cursor-pointer rounded-xl border border-black px-[1em] py-[0.1em] text-base"
+        id="resetButton"
+      >
+        Reset</button
+      >
+    </div>
+  </section>
+
+  <section class="mt-10 flex justify-center gap-4 px-4">
+    <div class="min-w-2xl">
+      <h2 class="text-6xl text-pretty">Maze</h2>
+      <div
+        class="grid h-64 w-full max-w-2xl grid-cols-[repeat(5,_minmax(50px,_100px))] overflow-hidden rounded-xl border border-black p-1"
+        id="maze"
+      >
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <p class="mb-4 max-w-96 text-xl">
+        Uses something, and got the current path for solve the maze if it is
+        solvable
+      </p>
+      <span> Try It </span>
+      <button
+        class="cursor-pointer rounded-xl border border-black px-[1em] py-[0.1em] text-base"
+        id="solveMazeButton"
+      >
+        Solve maze</button
+      >
+      <button
+        class="cursor-pointer rounded-xl border border-black px-[1em] py-[0.1em] text-base"
+        id="resetMazeButton"
+      >
+        Reset</button
+      >
+    </div>
   </section>
 </BaseLayout>
 
 <script src="../scripts/sortRainbow.js"></script>
+<script src="../scripts/maze.js"></script>

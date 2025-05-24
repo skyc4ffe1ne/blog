@@ -14,8 +14,8 @@ function appendColumns(rainbow) {
   for (let i = 0; i < rainbow.length; i++) {
     const col = document.createElement("div");
     col.style.background = `hsl(${rainbow[i].hue},${saturation}%, ${lightness}%)`;
-    col.style.width = "100px";
     col.style.height = "100%";
+    col.classList.add("rainbowCol");
     container.append(col);
   }
 }

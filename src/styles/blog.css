@@ -1,44 +1,40 @@
 @import "tailwindcss";
-@config "../../tailwind.config.mjs";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
   --font-sans: "Inter", "sans-serif";
+
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 0%);
+  --color-para-blog: hsl(220 6% 20%);
+  --color-link-blog: hsl(226 71% 40%);
+  --color-code-blog: hsl(217 91% 60%);
+
+  --color-h-color-1: hsl(14 100% 70%);
+  --color-h-color-2: hsl(344 100% 69%);
+  --color-h-color-3: hsl(134 100% 70%);
+  --color-h-color-4: hsl(74 100% 70%);
+  --color-h-color-5: hsl(326 85% 90%);
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    /* #FFFFFF */
-    --text-foreground: 0 0% 0%;
-    /* #000000 */
-    --text-para-blog: 220 6% 20%;
-    --text-link-blog: 226 71% 40%;
-    --text-code-blog: 217 91% 60%;
-    --h-color-1: 14 100% 70%;
-    --h-color-2: 344 100% 69%;
-    --h-color-3: 134 100% 70%;
-    --h-color-4: 74 100% 70%;
-    --h-color-5: 326 85% 90%;
-  }
-
-  .dark {
-    --background: 0 0% 0%;
-    /* #000000 */
-    --text-foreground: 0 0% 100%;
-    /* #FFFFFF */
-    --text-para-blog: 218 11% 65%;
-    --text-link-blog: 226 71% 55%;
-    --text-code-blog: 217 91% 80%;
-    --h-color-1: 14 100% 70%;
-    --h-color-2: 344 100% 69%;
-    --h-color-3: 134 100% 70%;
-    --h-color-4: 74 100% 70%;
-    --h-color-5: 326 85% 90%;
+  [data-theme="dark"] {
+    --color-background: hsl(0 0% 0%);
+    --color-foreground: hsl(0 0% 100%);
+    --color-para-blog: hsl(218 11% 65%);
+    --color-link-blog: hsl(226 71% 55%);
+    --color-code-blog: hsl(217 91% 80%);
+    --color-h-color-1: hsl(14 100% 70%);
+    --color-h-color-2: hsl(344 100% 69%);
+    --color-h-color-3: hsl(134 100% 70%);
+    --color-h-color-4: hsl(74 100% 70%);
+    --color-h-color-5: hsl(326 85% 90%);
   }
 }
 
 .blog {
-  @apply bg-background text-para_blog;
+  @apply text-para-blog bg-background;
 }
 
 .blog h1 {
@@ -58,7 +54,7 @@
 }
 
 .blog p {
-  @apply text-para_blog mb-11 max-w-2xl text-[1.375rem] leading-8 tracking-tight has-[+ol]:mb-2 has-[+ul]:mb-2;
+  @apply text-para-blog mb-11 max-w-2xl text-[1.375rem] leading-8 tracking-tight has-[+ol]:mb-2 has-[+ul]:mb-2;
 }
 
 .blog ul {
@@ -74,37 +70,37 @@
 }
 
 .blog a {
-  @apply text-link_blog block underline;
+  @apply text-link-blog block underline;
 }
 
-.blog code {
+/*.blog code {
   @apply text-code_blog before:text-code_blog after:text-code_blog relative mx-2 text-base before:absolute before:-top-1 before:-left-2 before:content-['`'] after:absolute after:-top-1 after:-right-2 after:content-['`'];
-}
+}*/
 
 .blog ::selection {
   @apply bg-foreground text-background;
 }
 
 .blog code::selection {
-  @apply bg-code_blog text-foreground;
+  @apply bg-code-blog text-foreground;
 }
 
-.blog .h_color1 {
-  @apply text-high_1;
+@utility h_color1 {
+  @apply text-h-color-1;
 }
 
 .blog .h_color2 {
-  @apply text-high_2;
+  @apply text-h-color-2;
 }
 
 .blog .h_color3 {
-  @apply text-high_3;
+  @apply text-h-color-3;
 }
 
 .blog .h_color4 {
-  @apply text-high_4;
+  @apply text-h-color-4;
 }
 
 .blog .h_color5 {
-  @apply text-high_5;
+  @apply text-h-color-5;
 }

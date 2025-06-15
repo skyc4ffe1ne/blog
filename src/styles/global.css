@@ -1,61 +1,38 @@
 @import "tailwindcss";
-@config "../../tailwind.config.mjs";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
+  --font-bold: "Notable", "sans-serif";
   --font-sans: "Inter", "sans-serif";
+  --color-background: hsl(0, 0%, 100%);
+  --color-foreground: 0 0% 0%;
+  --color-accent: hsl(203 78% 54%);
+  --color-ghost: hsl(218 11% 65%);
+  --color-ghost-label: hsl(216 12% 84%);
+  --color-link: hsl(0 0% 5%);
+  --color-header: hsl(221 39% 11%);
+  --color-para: hsl(0 0% 38%);
+  --color-intro: hsl(0 0% 50%);
+  --color-txt-outline: hsl(0 0% 25%);
+  --color-header_2: hsl(0, 0%, 62%);
+  --color-txt-journey: hsl(215 25% 27%);
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    /* #FFFFFF */
-    --text-foreground: 0 0% 0%;
-    /* #000000 */
-    --accent: 203 78% 54%;
-    /* #30A0E5 */
-    --ghost: 218 11% 65%;
-    /* #9CA3AF */
-    --ghost-label: 216 12% 84%;
-    /* #D9D9D9 */
-    --link: 0 0% 5%;
-    /* #9CA3AF */
-    --header: 221 39% 11%;
-    /* #1B2B3A */
-    --para: 0 0% 38%;
-    /* #616161 */
-    --intro: 0 0% 50%;
-    /* #808080 */
-    --txt-outline: 0 0% 25%;
-    /* #B5B5B5 */
-    --header_2: 0, 0%, 62%;
-    /* #9F9F9F */
-    --txt-journey: 215 25% 27%;
-  }
-
-  .dark {
-    --background: 0 0% 0%;
-    /* #000000 */
-    --text-foreground: 0 0% 100%;
-    /* #FFFFFF */
-    --accent: 203 78% 54%;
-    /* #30A0E5 */
-    --ghost: 218 11% 65%;
-    /* #9CA3AF */
-    --ghost-label: 215 14% 34%;
-    /* #6F6F6F */
-    --link: 0 0% 95%;
-    /* #9CA3AF */
-    --header: 220 14% 96%;
-    /* #E9F2F5 */
-    --para: 0 0% 68%;
-    /* #ADADAD */
-    --intro: 0 0% 50%;
-    /* #808080 */
-    --txt-outline: 0 0% 85%;
-    /* #D1D1D1 */
-    --header_2: 0, 0%, 32%;
-    /* #525252 */
-    --txt-journey: 215 25% 90%;
+  [data-theme="dark"] {
+    --color-background: hsl(0 0% 0%);
+    --color-foreground: hsl(0 0% 100%);
+    --color-accent: hsl(203 78% 54%);
+    --color-ghost: hsl(218 11% 65%);
+    --color-ghost-label: hsl(215 14% 34%);
+    --color-link: hsl(0 0% 95%);
+    --color-header: hsl(220 14% 96%);
+    --color-para: hsl(0 0% 68%);
+    --color-intro: hsl(0 0% 50%);
+    --color-txt-outline: hsl(0 0% 85%);
+    --color-header_2: hsl(0, 0%, 32%);
+    --color-txt-journey: hsl(215 25% 90%);
   }
 }
 
@@ -66,15 +43,7 @@
 }
 
 @utility button_outline {
-  @apply text-txt_outline rounded-xl border border-(--foreground) px-3 py-1 text-base md:px-5;
-}
-
-@utility hover_effect {
-  @apply ease-in-expo transition-[color] duration-300;
-}
-
-@utility gray_effect {
-  @apply ease-in-expo transition-all duration-300;
+  @apply text-txt-outline rounded-xl border border-(--foreground) px-3 py-1 text-base md:px-5;
 }
 
 @utility wall {

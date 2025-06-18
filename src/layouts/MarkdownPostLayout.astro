@@ -1,9 +1,44 @@
 ---
 import BlogLayout from "./BlogLayout.astro";
 const { frontmatter } = Astro.props;
+console.log(frontmatter);
 ---
 
 <BlogLayout pageTitle={frontmatter.title}>
+  <div class="flex flex-col items-center justify-center">
+    <!--    <h1
+      class="text-foreground my-8 text-center text-5xl font-medium tracking-tighter text-pretty capitalize sm:text-7xl sm:leading-[52px] sm:tracking-tight xl:text-9xl font-clamp-h1"
+    >
+      {frontmatter.title}
+</h1> -->
+    <h1
+      class="text-foreground h1_clamp my-8 max-w-7xl text-center leading-[52px] font-medium tracking-tighter text-pretty capitalize min-[520px]:leading-16 min-[800px]:leading-20 sm:tracking-tight lg:leading-24"
+    >
+      {frontmatter.title}
+    </h1>
+
+    <div class="w-full max-w-sm px-4">
+      <img
+        src={frontmatter.image.url}
+        width="100%"
+        alt={frontmatter.image.alt}
+        class="-translate-y-7 sm:-translate-y-9 md:-translate-y-7"
+      />
+    </div>
+
+    <div
+      class="mb-8 flex w-full justify-between px-4 pb-2 text-sm font-semibold sm:w-3/4 sm:border-b sm:border-black"
+    >
+      <div class="flex gap-1">
+        <div
+          class="size-6 rounded-full bg-linear-30 from-sky-300 to-orange-400"
+        >
+        </div>
+        <div>{frontmatter.author}</div>
+      </div>
+      <div>{frontmatter.pubDate.toString().slice(0, 10)}</div>
+    </div>
+  </div>
   <!-- <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
@@ -18,7 +53,7 @@ const { frontmatter } = Astro.props;
     }
   </div> -->
 
-  <div class="flex justify-center">
+  <div class="sm:flex sm:justify-center">
     <div class="mb-8 px-4 text-left">
       <slot />
     </div>

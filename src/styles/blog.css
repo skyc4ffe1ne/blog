@@ -4,7 +4,6 @@
 
 @theme {
   --font-sans: "Inter", "sans-serif";
-
   --color-background: hsl(0 0% 100%);
   --color-foreground: hsl(0 0% 0%);
   --color-para-blog: hsl(220 6% 20%);
@@ -34,12 +33,12 @@
 }
 
 .blog {
-  @apply text-para-blog bg-background;
+  @apply text-para-blog bg-background selection:bg-foreground selection:text-background;
 }
 
-.blog h1 {
+/*.blog h1 {
   @apply text-foreground my-8 text-[42px] leading-[52px] tracking-tight capitalize;
-}
+}*/
 
 .blog h2 {
   @apply text-foreground mb-7 text-[32px] leading-10 tracking-tight capitalize;
@@ -73,34 +72,34 @@
   @apply text-link-blog block underline;
 }
 
-/*.blog code {
-  @apply text-code_blog before:text-code_blog after:text-code_blog relative mx-2 text-base before:absolute before:-top-1 before:-left-2 before:content-['`'] after:absolute after:-top-1 after:-right-2 after:content-['`'];
-}*/
-
-.blog ::selection {
-  @apply bg-foreground text-background;
+.blog pre {
+  @apply mb-11 rounded-xl p-5 outline-2 -outline-offset-4 outline-gray-600;
 }
 
-.blog code::selection {
-  @apply bg-code-blog text-foreground;
+.blog code {
+  @apply text-blue-400;
 }
 
 @utility h_color1 {
   @apply text-h-color-1;
 }
 
-.blog .h_color2 {
+@utility h_color2 {
   @apply text-h-color-2;
 }
 
-.blog .h_color3 {
+@utility h_color3 {
   @apply text-h-color-3;
 }
 
-.blog .h_color4 {
+@utility h_color4 {
   @apply text-h-color-4;
 }
 
-.blog .h_color5 {
+@utility h_color5 {
   @apply text-h-color-5;
+}
+
+@utility h1_clamp {
+  font-size: clamp(3rem, 1.3673rem + 8.1633vw, 8rem);
 }

@@ -1,10 +1,18 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Systematic Program Design Part 1"
+title: "Systematic Program Design"
+description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore voluptates fuga ex doloribus quisquam tempora fugiat? Assumenda nesciunt quam placeat."
 author: "caffeine*"
+genre: "OSSU"
+image:
+  url: "/images/img_blog.jpg"
+  alt: "Image"
+tags:
+  - name: "computer science"
+  - name: "github"
+  - name: "git"
+pubDate: 24/10/2024
 ---
-
-# Systematic Program Design Part 1
 
 ### What is it ?
 
@@ -18,7 +26,7 @@ L'argomento principale di questo corso, è quello di riuscire a dividere ogni pr
 #### Quali sono gli <span class="h_color1">steps </span> ?
 
 Una sezione del corso, riguarda a _How to Design Function_ (HtDF). <br />
-Per farlo dobbiamo dividerla in 6 <span class="text-background"> steps </span> fondamentali:
+Per farlo dobbiamo dividerla in 6 <span class="h_color1"> steps </span> fondamentali:
 
 Supponiamo di voler creare una funzione che qualsiasi `n` prende in entrata, restituisce il prodotto moltiplicato per 2.
 

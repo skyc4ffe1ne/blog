@@ -1,10 +1,18 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "What is a commit"
+description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore voluptates fuga ex doloribus quisquam tempora fugiat? Assumenda nesciunt quam placeat."
 author: "caffeine*"
+genre: "General"
+image:
+  url: "/images/img_blog.jpg"
+  alt: "Image"
+tags:
+  - name: "computer science"
+  - name: "github"
+  - name: "git"
+pubDate: 24/10/2024
 ---
-
-# The Three Main Areas Of Git
 
 ### Working Directory
 

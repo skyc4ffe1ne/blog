@@ -12,5 +12,3 @@ tl.to(asterisk, {
 cont_logo.addEventListener("mouseenter", function() {
   tl.restart();
 });
-
-console.log("Asterisk: ", asterisk);

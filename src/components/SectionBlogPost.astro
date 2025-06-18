@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+const data = import.meta.glob("../pages/blog/*.md", { eager: true });
+const format_data = Object.values(data).map((post) => {
+  return { ...post.frontmatter, url: post.url };
+});
+---
+
+<section class="mt-20 w-full px-20">
+  <header class="flex w-full justify-between border-b-2 border-gray-400 pb-4">
+    <h3 class="flex-1">All posts</h3>
+    <p class="flex-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita in
+      doloremque ab laboriosam velit placeat possimus esse autem qui?
+    </p>
+
+    <div class="flex-1"></div>
+  </header>
+
+  {
+    format_data.map((post, idx) => (
+      <a
+        class="group mt-16 flex w-fit cursor-pointer gap-20 px-8"
+        href={post.url}
+      >
+        <div class="pl-4">
+          <p class="text-sm font-semibold tracking-wide text-black/60 uppercase">
+            {post.genre}
+          </p>
+          <h2 class="w-md text-6xl tracking-tighter group-hover:underline">
+            {post.title}
+          </h2>
+
+          <div class="flex gap-4 pt-4">
+            <div class="flex items-center gap-1">
+              <Icon name="clock-icon" class="size-6 text-gray-400" />
+              <p>12 min.</p>
+            </div>
+
+            <div class="flex items-center gap-1">
+              <Icon name="date-icon" class="size-6 text-gray-400" />
+              <p>{post.pubDate}</p>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4">
+          <p class="max-w-2xl text-lg text-pretty text-gray-600">
+            {post.description}
+          </p>
+
+          <div class="flex gap-1 pt-4 text-blue-400 group-hover:underline">
+            See it now
+            <Icon name="arrow_link-icon" class="size-6" />
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</section>

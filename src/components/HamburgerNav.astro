@@ -3,28 +3,24 @@ import { Icon } from "astro-icon/components";
 
 const hamburgerLinks = [
   {
-    nameLink: "Blog",
-    link: "/blog/",
-  },
-  {
-    nameLink: "About me",
-    link: "/about-me/",
-  },
-  {
     nameLink: "Journey",
     link: "/timeline/",
+  },
+  {
+    nameLink: "Experiment",
+    link: "/experiment/",
   },
 ];
 ---
 
 <div
-  class="hamburgerNav fixed inset-0 hidden bg-foreground/20 backdrop-blur-sm"
+  class="hamburgerNav bg-foreground/20 fixed inset-0 hidden backdrop-blur-sm"
 >
 </div>
 <div
-  class="hamburgerNav fixed right-4 top-4 hidden w-full max-w-xs rounded-lg bg-background p-6 text-base font-semibold text-foreground"
+  class="hamburgerNav bg-background text-foreground fixed top-4 right-4 hidden w-full max-w-xs rounded-lg p-6 text-base font-semibold"
 >
-  <button class="hamburger absolute right-4 top-4">
+  <button class="hamburger absolute top-4 right-4">
     <Icon name="close_hamburger-icon" />
   </button>
   <ul class="space-y-6">
@@ -40,7 +36,7 @@ const hamburgerLinks = [
   <a
     href="https://github.com/skyc4ffe1ne"
     target="_blank"
-    class="mt-6 border-t border-ghost pt-6"
+    class="border-ghost mt-6 border-t pt-6"
   >
     <Icon name="github-icon" />
   </a>

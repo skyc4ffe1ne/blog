@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import SectionProject from "../components/SectionProject.astro";
 import SectionBlogPost from "../components/SectionBlogPost.astro";
+import SectionPath from "../components/SectionPath.astro";
 
 import "../styles/global.css";
 ---
@@ -10,18 +11,17 @@ import "../styles/global.css";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Blog</title>
   </head>
   <body>
     <BaseLayout>
       <Hero />
       <SectionProject />
       <SectionBlogPost />
+      <SectionPath />
     </BaseLayout>
   </body>
 </html>

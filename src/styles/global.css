@@ -42,6 +42,10 @@
   }
 }
 
+@utility length-line {
+  height: calc(50vh - 32px);
+}
+
 .expanded .hamburgerNav {
   display: block;
 }

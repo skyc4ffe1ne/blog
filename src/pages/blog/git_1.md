@@ -5,7 +5,7 @@ description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore 
 author: "caffeine*"
 genre: "General"
 image:
-  url: "/images/img_blog.jpg"
+  url: "/images/git_image.jpeg"
   alt: "Image"
 tags:
   - name: "computer science"

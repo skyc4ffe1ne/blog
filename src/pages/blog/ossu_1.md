@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Systematic Program Design"
+titlePreview: "The best way i found to how to code"
 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore voluptates fuga ex doloribus quisquam tempora fugiat? Assumenda nesciunt quam placeat."
 author: "caffeine*"
 genre: "OSSU"

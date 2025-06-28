@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "What is a commit"
+titlePreview: "How i understood and learned git"
 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore voluptates fuga ex doloribus quisquam tempora fugiat? Assumenda nesciunt quam placeat."
 author: "caffeine*"
 genre: "General"

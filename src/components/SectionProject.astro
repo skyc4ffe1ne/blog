@@ -10,9 +10,12 @@ const projects = [
       },
     ],
     description: "A web app that make you to create a palette from an image",
-    primaryImg: "...",
-    secondaryImg: "...",
-    thertiaryImg: "...",
+
+    primaryImg: "/images/color-to-palette_primary.png",
+    secondaryImg: "/images/color-to-palette_secondary.png",
+    tertiaryImg: "/images/color-to-palette_tertiary.png",
+    altImg:
+      "showing the app interface where a color palette is generated from an uploaded image",
     link: "https://skyc4ffe1ne.github.io/image-to-colors.github.io/",
   },
   {
@@ -30,7 +33,7 @@ const projects = [
     description: "A web app that make you to create a personal quiz",
     primaryImg: "...",
     secondaryImg: "...",
-    thertiaryImg: "...",
+    tertiaryImg: "...",
     link: "https://github.com/skyc4ffe1ne/re-quiz",
   },
 ];
@@ -68,10 +71,29 @@ const projects = [
           </a>
         </div>
 
-        <div class="grid grid-cols-3 gap-x-12">
-          <div class="h-48 w-64 rounded-lg bg-red-400" />
-          <div class="h-48 w-64 rounded-lg bg-red-400" />
-          <div class="h-48 w-64 rounded-lg bg-red-400" />
+        <div class="grid grid-cols-[repeat(3,_minmax(200px,400px))] gap-x-12">
+          <div class="rounded-lg">
+            <img
+              src={project.primaryImg}
+              alt="color to palette img"
+              class="rounded-lg"
+            />
+          </div>
+
+          <div class="rounded-lg">
+            <img
+              src={project.secondaryImg}
+              alt="color to palette img"
+              class="rounded-lg"
+            />
+          </div>
+          <div class="rounded-lg">
+            <img
+              src={project.tertiaryImg}
+              alt="color to palette img"
+              class="rounded-lg"
+            />
+          </div>
         </div>
       </div>
     ))

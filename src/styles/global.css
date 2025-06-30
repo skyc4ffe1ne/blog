@@ -5,10 +5,11 @@
 @theme {
   --font-bold: "Notable", "sans-serif";
   --font-sans: "Inter", "sans-serif";
+  --breakpoint-xl: 70rem;
   --color-background: hsl(0, 0%, 100%);
   --color-foreground: 0 0% 0%;
   --color-accent: hsl(203 78% 54%);
-  --color-ghost: hsl(218 11% 65%);
+  --color-ghost: hsl(214.99 31% 17%);
   --color-ghost-label: hsl(216 12% 84%);
   --color-link: hsl(0 0% 5%);
   --color-header: hsl(221 39% 11%);

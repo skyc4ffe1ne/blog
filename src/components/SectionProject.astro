@@ -1,5 +1,6 @@
 ---
-import { Icon } from "astro-icon/components";
+import SectionProjectText from "./ui/SectionProjectText.astro";
+import SectionProjectImage from "./ui/SectionProjectImage.astro";
 const projects = [
   {
     title: "Color To Palette",
@@ -10,126 +11,26 @@ const projects = [
       },
     ],
     description: "A web app that make you to create a palette from an image",
-
     primaryImg: "/images/color-to-palette_primary.png",
     secondaryImg: "/images/color-to-palette_secondary.png",
     tertiaryImg: "/images/color-to-palette_tertiary.png",
-    altImg:
-      "showing the app interface where a color palette is generated from an uploaded image",
+    altPrimaryImg: "showing the app interface of the webapp color to palette",
+    altSecondaryImg:
+      "showing the app color to palette when an images is loaded",
+    altTertiaryImg:
+      "showing the app color to palette how the user can export the colors",
     link: "https://skyc4ffe1ne.github.io/image-to-colors.github.io/",
-  },
-  {
-    title: "Requiz",
-    stack: [
-      {
-        labelName: "React",
-        iconName: "react-icon",
-      },
-      {
-        labelName: "Next.js",
-        iconName: "nextjs-icon",
-      },
-    ],
-    description: "A web app that make you to create a personal quiz",
-    primaryImg: "...",
-    secondaryImg: "...",
-    tertiaryImg: "...",
-    link: "https://github.com/skyc4ffe1ne/re-quiz",
   },
 ];
 ---
 
-<section
-  class="mt-20 flex w-full flex-col items-center justify-center sm:mt-40"
->
+<section class="mt-20 flex w-full flex-col md:mt-40 md:items-center">
   {
     projects.map((project) => (
-      <div class="flex items-center gap-24 not-first:mt-10">
-        <div class="w-xs">
-          <h3 class="text-4xl font-medium tracking-tight text-pretty">
-            {project.title}
-          </h3>
-          <div class="flex gap-4 pt-1">
-            {project.stack.map((st) => (
-              <div class="flex items-center gap-2">
-                <Icon name={st.iconName} class="size-4" />
-                <span class=""> {st.labelName} </span>
-              </div>
-            ))}
-          </div>
-          <p class="pt-5 pb-8 text-xl/6 tracking-tight text-pretty text-gray-700">
-            {project.description}
-          </p>
-
-          <a
-            href={project.link}
-            class="flex items-center gap-2 text-blue-400"
-            target="_blank"
-          >
-            See it live
-            <Icon name="arrow_link-icon" />
-          </a>
-        </div>
-
-        <div class="grid grid-cols-[repeat(3,_minmax(200px,400px))] gap-x-12">
-          <div class="rounded-lg">
-            <img
-              src={project.primaryImg}
-              alt="color to palette img"
-              class="rounded-lg"
-            />
-          </div>
-
-          <div class="rounded-lg">
-            <img
-              src={project.secondaryImg}
-              alt="color to palette img"
-              class="rounded-lg"
-            />
-          </div>
-          <div class="rounded-lg">
-            <img
-              src={project.tertiaryImg}
-              alt="color to palette img"
-              class="rounded-lg"
-            />
-          </div>
-        </div>
+      <div class="flex w-full flex-col gap-5 px-3 not-first:mt-10 md:flex-row md:items-center md:justify-between md:gap-8 lg:gap-10">
+        <SectionProjectText project={project} />
+        <SectionProjectImage project={project} />
       </div>
     ))
   }
 </section>
-
-<!--
-  <div class="flex items-center gap-24">
-    <div class="w-xs">
-      <h3 class="text-2xl font-medium tracking-tight text-pretty">Requiz</h3>
-      <div class="flex gap-4 pt-1">
-        <div class="flex items-center gap-2">
-          <Icon name="react-icon" class="size-4" />
-          <span class=""> React </span>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <Icon name="nextjs-icon" class="size-4" />
-          <span> Next.js </span>
-        </div>
-      </div>
-      <p class="pt-3 pb-8 text-base/6 tracking-tight text-pretty text-gray-700">
-        A <span class="text-foreground">web app</span> that make you to create a
-        personal quiz
-      </p>
-
-      <a href="" class="flex items-center gap-2 text-blue-400">
-        See it live
-        <Icon name="arrow_link-icon" />
-      </a>
-    </div>
-
-    <div class="grid grid-cols-3 gap-x-12">
-      <div class="h-48 w-64 rounded-lg bg-red-400"></div>
-      <div class="h-48 w-64 rounded-lg bg-red-400"></div>
-      <div class="h-48 w-64 rounded-lg bg-red-400"></div>
-    </div>
-  </div>
--->

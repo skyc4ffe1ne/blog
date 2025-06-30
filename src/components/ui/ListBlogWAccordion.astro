@@ -1,0 +1,80 @@
+---
+const { post } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="border-foreground flex cursor-pointer flex-col border-b"
+  data-title={post.title}
+  data-description={post.description}
+  data-image-url={post.image.url}
+  data-image-alt={post.image.alt}
+>
+  <header class="accordion">
+    <p class="text-xs md:hidden">{post.pubDate}</p>
+    <div class="flex gap-2">
+      <p class="hidden flex-1 text-xs md:block md:text-base">{post.pubDate}</p>
+      <h2
+        class="splitTitle flex-4 overflow-hidden text-2xl tracking-tighter text-ellipsis whitespace-nowrap md:text-4xl"
+      >
+        {post.title}
+      </h2>
+
+      <p
+        class="flex-1 text-sm font-semibold tracking-wide text-black/60 uppercase dark:text-white/60"
+      >
+        {post.genre}
+      </p>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="accordion-arrow size-6 flex-1 transition-transform [.open_&]:rotate-90"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499"></path>
+      </svg>
+    </div>
+  </header>
+
+  <div
+    class="hidden opacity-100 transition-opacity duration-300 ease-in-out starting:opacity-0 [.open_&]:block"
+  >
+    <div class="flex pt-8">
+      <h4 class="min-w-28">Description:</h4>
+      <p class="text-xl">
+        {post.description ? post.description : "There is no description"}
+      </p>
+    </div>
+
+    <div class="flex pt-2">
+      <h4 class="min-w-28">Genre:</h4>
+      {
+        post.tags.map((tag) => (
+          <div class="border-foreground border px-2 py-0.5">{tag.name}</div>
+        ))
+      }
+    </div>
+
+    <a href={post.url} class="text-accent flex items-center gap-2 pt-8">
+      See it live
+      <Icon name="arrow_link-icon" />
+    </a>
+  </div>
+</div>
+
+<script>
+  let accordions = document.querySelectorAll(".accordion");
+  let accordionArrow = document.querySelectorAll(".accordion-arrow");
+
+  accordions.forEach((acc) => {
+    acc.addEventListener("click", function () {
+      acc.parentElement.classList.toggle("open");
+    });
+  });
+</script>

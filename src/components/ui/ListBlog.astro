@@ -1,0 +1,42 @@
+---
+const { post } = Astro.props;
+---
+
+<a
+  class="post-list border-foreground flex cursor-pointer items-center border-b"
+  href={post.url}
+  data-title={post.title}
+  data-title-preview={post.titlePreview}
+  data-image-url={post.image.url}
+  data-image-alt={post.image.alt}
+>
+  <div class="flex flex-1 items-center gap-1">
+    <p class="text-base">{post.pubDate}</p>
+  </div>
+
+  <h2
+    class="splitTitle flex-4 overflow-hidden text-4xl tracking-tighter text-ellipsis whitespace-nowrap group-hover:underline"
+  >
+    {post.title}
+  </h2>
+
+  <p
+    class="flex-1 text-sm font-semibold tracking-wide text-black/60 uppercase dark:text-white/60"
+  >
+    {post.genre}
+  </p>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="size-6 flex-1"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499"></path>
+  </svg>
+</a>

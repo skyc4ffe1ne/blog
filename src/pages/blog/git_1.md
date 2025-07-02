@@ -2,12 +2,12 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "What is a commit"
 titlePreview: "How i understood and learned git"
-description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore voluptates fuga ex doloribus quisquam tempora fugiat? Assumenda nesciunt quam placeat."
+description: "When I first heard about Git, I thought it was just some complex tool for professional developers. But the more I used it, the more I realized how helpful it is — not just for coding, but for learning and keeping track of what you're doing. In this post, I share how I started learning Git, what a 'commit' actually is, and why version control is a game-changer for anyone working on projects, even as a student like me."
 author: "caffeine*"
 genre: "General"
 image:
   url: "/images/git_image.jpeg"
-  alt: "Image"
+  alt: "Logo of git"
 tags:
   - name: "computer science"
   - name: "github"

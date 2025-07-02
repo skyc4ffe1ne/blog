@@ -9,6 +9,8 @@ const lightness = 70;
 
 let onlyHue = [];
 
+let isSorting = false;
+
 function appendColumns(rainbow) {
   container.innerHTML = ""; // Reset the container
   for (let i = 0; i < rainbow.length; i++) {
@@ -21,6 +23,8 @@ function appendColumns(rainbow) {
 }
 
 function createColumns() {
+  if (isSorting) return;
+
   for (let i = 0; i < numberOfColumns; i++) {
     let hue = Math.floor(Math.random() * numberOfColumns);
     //    onlyHue = [
@@ -39,6 +43,7 @@ function createColumns() {
 createColumns();
 
 function sortRainbow() {
+  isSorting = true;
   const columns = container.children;
 
   for (let i = 0; i < onlyHue.length; i++) {
@@ -54,6 +59,10 @@ function sortRainbow() {
       }
     }
   }
+
+  setTimeout(() => {
+    isSorting = false;
+  }, 1);
 }
 
 sortButton.addEventListener("click", sortRainbow);

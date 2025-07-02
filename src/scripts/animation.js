@@ -51,6 +51,7 @@ cont_logo.addEventListener("mouseenter", function() {
 
 // Hero animation
 function calculate_line() {
+  if (!hero_section?.clientWidth || !hero_section?.clientHeight) return;
   const height_line = hero_section.clientHeight - box_orange.clientHeight * 2;
   const width_line = hero_section.clientWidth - box_orange.clientWidth * 2;
 

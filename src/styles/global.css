@@ -47,6 +47,14 @@
   height: calc(50vh - 32px);
 }
 
+@utility wall {
+  @apply relative h-full w-full border border-dashed border-cyan-300 bg-black dark:bg-white;
+}
+
+@utility free {
+  @apply relative h-full w-full border border-dashed border-lime-400 bg-gray-400 dark:bg-gray-800;
+}
+
 .expanded .hamburgerNav {
   display: block;
 }

@@ -2,8 +2,6 @@ const mazeContainer = document.querySelector("#maze");
 const solveMazeBtn = document.querySelector("#solveMazeButton");
 const resetBtn = document.querySelector("#resetMazeButton");
 
-console.log(mazeContainer, solveMazeBtn, resetBtn);
-
 const pos = { x: 0, y: 0 };
 
 // Example with pos
@@ -233,7 +231,6 @@ function solvable(m, p, visited) {
   }
   for (let i = 0; i < lop.length; i++) {
     if (lop[i].x === 4 && lop[i].y === 4) {
-      console.log("Fine loop?: ", lop[i]);
       const endSolutionPath = document.createElement("div");
       endSolutionPath.style.position = "absolute";
       endSolutionPath.style.top = "50%";

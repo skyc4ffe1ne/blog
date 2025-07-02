@@ -2,12 +2,12 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Systematic Program Design"
 titlePreview: "The best way i found to how to code"
-description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore voluptates fuga ex doloribus quisquam tempora fugiat? Assumenda nesciunt quam placeat."
+description: "When I first started learning to code, everything felt chaotic — so many things to think about, so many ways to do the same thing. But then I stumbled upon a systematic approach to programming that changed the way I view code."
 author: "caffeine*"
 genre: "OSSU"
 image:
   url: "/images/img_blog.jpg"
-  alt: "Image"
+  alt: "Abstract photo for Systematic Program Design"
 tags:
   - name: "computer science"
   - name: "github"

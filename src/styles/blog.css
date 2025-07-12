@@ -21,7 +21,7 @@
   [data-theme="dark"] {
     --color-background: hsl(0 0% 0%);
     --color-foreground: hsl(0 0% 100%);
-    --color-para-blog: hsl(218 11% 65%);
+    --color-para-blog: hsl(0 0% 85%);
     --color-link-blog: hsl(226 71% 55%);
     --color-code-blog: hsl(217 91% 80%);
     --color-h-color-1: hsl(14 100% 70%);
@@ -73,33 +73,45 @@
 }
 
 .blog pre {
-  @apply mb-11 rounded-xl p-5 outline-2 -outline-offset-4 outline-gray-600;
+  @apply mb-11 rounded-xl p-5 outline-2 -outline-offset-4 outline-gray-600 relative;
+}
+
+.blog .blogImg {
+  @apply mb-11 rounded-xl;
+}
+
+.btnCopy {
+  @apply bg-white absolute top-2 right-2 rounded-md hidden z-50 text-black text-sm px-3 py-0.5 cursor-pointer tracking-tight;
+}
+
+.visible .btnCopy {
+  @apply block;
 }
 
 .blog code {
   @apply text-blue-400;
 }
 
-@utility h_color1 {
-  @apply text-h-color-1;
+.h_color1 {
+  @apply bg-h-color-1/30 dark:bg-h-color-1/20;
 }
 
-@utility h_color2 {
-  @apply text-h-color-2;
+.h_color2 {
+  @apply bg-h-color-2/30 dark:bg-h-color-2/20;
 }
 
-@utility h_color3 {
-  @apply text-h-color-3;
+.h_color3 {
+  @apply bg-h-color-3/30 dark:bg-h-color-3/20;
 }
 
-@utility h_color4 {
-  @apply text-h-color-4;
+.h_color4 {
+  @apply bg-h-color-4/30 dark:bg-h-color-4/20;
 }
 
-@utility h_color5 {
-  @apply text-h-color-5;
+.h_color5 {
+  @apply bg-h-color-5/30 dark:bg-h-color-5/20;
 }
 
-@utility h1_clamp {
+.h1_clamp {
   font-size: clamp(3rem, 1.3673rem + 8.1633vw, 8rem);
 }

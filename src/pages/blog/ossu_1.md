@@ -22,12 +22,13 @@ It' simple, logical, make u step like a baby for grown and then be able to walks
 
 ### Why is that ?
 
-L'argomento principale di questo corso, è quello di riuscire a dividere ogni problema piccolo o grande che sia in piccoli<span class="h_color1"> steps </span>.
+L'argomento principale di questo corso, è quello di riuscire a dividere ogni problema piccolo o grande che sia in piccoli <span class="h_color1">steps</span>.
 
-#### Quali sono gli <span class="h_color1">steps </span> ?
+#### Quali sono gli <span class="h_color1">steps</span> ?
 
 Una sezione del corso, riguarda a _How to Design Function_ (HtDF). <br />
-Per farlo dobbiamo dividerla in 6 <span class="h_color1"> steps </span> fondamentali:
+Per farlo dobbiamo dividerla in 6 <span class="h_color1">steps</span> fondamentali:
+
 
 Supponiamo di voler creare una funzione che qualsiasi `n` prende in entrata, restituisce il prodotto moltiplicato per 2.
 

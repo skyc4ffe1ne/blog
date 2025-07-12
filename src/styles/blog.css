@@ -65,7 +65,7 @@
 }
 
 .blog li {
-  @apply text-xl;
+  @apply text-xl mt-4;
 }
 
 .blog a {

@@ -1,6 +1,6 @@
 const mazeContainer = document.querySelector("#maze");
-const solveMazeBtn = document.querySelector("#solveMazeButton");
-const resetBtn = document.querySelector("#resetMazeButton");
+const solveMazeBtn = document.querySelector("#mazeButton");
+const resetBtn = document.querySelector("#mazeButtonReset");
 
 const pos = { x: 0, y: 0 };
 

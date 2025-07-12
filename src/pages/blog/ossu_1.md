@@ -61,7 +61,7 @@ Supponiamo di voler creare una funzione che qualsiasi `n` prende in entrata, res
 
    > Qui eseguiamo il nostro codice, per vedere se abbiamo errori di sintassi e se i nostri test funzionano come _vogliamo_
 
-5. Template
+5. **Template**:
    Iniziamo a dirigerci verso la funzione finale, immaginatelo come un placeholder che si può adattare in base alla vostra logica.
 
    ```js

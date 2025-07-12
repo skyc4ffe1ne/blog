@@ -1,6 +1,6 @@
 const container = document.querySelector("#rainbow");
-const sortButton = document.querySelector("#sortButton");
-const resetButton = document.querySelector("#resetButton");
+const sortButton = document.querySelector("#rainbowButton");
+const resetButton = document.querySelector("#rainbowButtonReset");
 
 const numberOfColumns = 359;
 const duration = 7.5;

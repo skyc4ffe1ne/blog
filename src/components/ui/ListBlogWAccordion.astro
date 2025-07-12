@@ -32,7 +32,7 @@ import { Icon } from "astro-icon/components";
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="accordion-arrow size-6 flex-1 transition-transform [.open_&]:rotate-90"
+        class="size-6 flex-1 transition-transform [.open_&]:rotate-90"
       >
         <path
           stroke-linecap="round"
@@ -70,7 +70,6 @@ import { Icon } from "astro-icon/components";
 
 <script>
   let accordions = document.querySelectorAll(".accordion");
-  let accordionArrow = document.querySelectorAll(".accordion-arrow");
 
   accordions.forEach((acc) => {
     acc.addEventListener("click", function () {

@@ -6,6 +6,15 @@ import { Icon } from "astro-icon/components";
   <section
     class="flex items-center justify-between border-t-2 border-gray-400 pt-12"
   >
+    <a href="/" class="flex">
+      <div class="cont_logo flex items-center">
+        <Icon name="caffeine" class="text-foreground" />
+        <div class="flex h-8 items-start">
+          <Icon name="asterisk-icon" class="asterisk" />
+        </div>
+      </div>
+    </a>
+
     <div class="flex gap-1 rounded-full bg-gray-950/15 p-1 dark:bg-white/10">
       <span
         aria-label="Light theme"
@@ -39,15 +48,6 @@ import { Icon } from "astro-icon/components";
         </svg>
       </span>
     </div>
-
-    <a href="/" class="flex">
-      <div class="cont_logo flex items-center">
-        <Icon name="caffeine" class="text-foreground" />
-        <div class="flex h-8 items-start">
-          <Icon name="asterisk-icon" class="asterisk" />
-        </div>
-      </div>
-    </a>
   </section>
 </footer>
 

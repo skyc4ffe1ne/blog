@@ -27,10 +27,11 @@ const projects = [
 <section class="mt-20 flex w-full flex-col md:mt-40 md:items-center">
   {
     projects.map((project) => (
-      <div class="flex w-full flex-col gap-5 px-3 not-first:mt-10 md:flex-row md:items-center md:justify-between md:gap-8 lg:gap-10">
+      <div class="flex w-full flex-col gap-0 px-3 not-first:mt-10">
         <SectionProjectText project={project} />
         <SectionProjectImage project={project} />
       </div>
     ))
   }
 </section>
+<!-- md:flex-row md:items-center md:justify-between md:gap-8 lg:gap-10 -->

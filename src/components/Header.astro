@@ -1,8 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 import ThemeToggle from "./ThemeToggle.astro";
-import Hamburger from "./Hamburger.astro";
-import HamburgerNav from "./HamburgerNav.astro";
 const { isBlog } = Astro.props;
 
 const linksNav = [
@@ -23,28 +21,24 @@ const linksNav = [
     </div>
   </a>
 
-  {
-    isBlog ? (
-      ""
-    ) : (
-      <nav class="hidden md:flex md:flex-1 md:items-end md:justify-center">
-        <ul class="flex gap-8">
-          {linksNav.map((el) => (
-            <li>
-              <a href={el.link} class="text-link hover:text-foreground text-sm">
-                {el.nameLink}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    )
-  }
+  <nav class="hidden md:flex md:flex-1 md:items-end md:justify-center">
+    <ul class="flex gap-8">
+      {
+        linksNav.map((el) => (
+          <li>
+            <a
+              href={el.link}
+              class="text-link hover:text-foreground text-sm font-medium"
+            >
+              {el.nameLink}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 
-  {isBlog ? "" : <Hamburger />}
   <div class="ml-2 flex justify-end md:ml-0 md:flex-1">
     <ThemeToggle />
   </div>
 </header>
-
-<HamburgerNav />

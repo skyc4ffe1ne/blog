@@ -62,3 +62,39 @@
 .rainbowCol {
   width: 100%;
 }
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --gradient-percent {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+/* 
+.shiny-border {
+  border: 4px solid transparent;
+  background: 
+    linear-gradient(var(--color-background), var(--color-background)) padding-box,
+    conic-gradient(from var(--gradient-angle),
+      var(--color-gray-300) var(--gradient-percent) 280deg,
+      var(--color-red-400) var(--gradient-percent) 300deg,
+      var(--color-yellow-400) var(--gradient-percent) 320deg,
+      var(--color-purple-400) var(--gradient-percent) 340deg,
+      var(--color-blue-400) 360deg) border-box;
+  animation: rotate-btn 3s linear infinite;
+}
+
+@keyframes rotate-btn {
+  from {
+    --gradient-angle: 0deg;
+  }
+
+  to {
+    --gradient-angle: 360deg;
+  }
+}

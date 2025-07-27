@@ -6,7 +6,7 @@ description: "When I first heard about Git, I thought it was just some complex t
 author: "caffeine*"
 genre: "General"
 image:
-  url: "/images/git_image.jpeg"
+  url: "/images/gif_test.gif"
   alt: "Logo of git"
 tags:
   - name: "computer science"
